@@ -33,10 +33,13 @@ public with sharing class VariablesDataTypesOperators {
      */
    
     public static Integer addition(Integer a, Integer b) { 
-        Integer a0;
-        Integer b0;
-        Integer sum = (a + b);
-        return sum; // Replace null with the variable you used to store the result
+        if (a!= null && b!= null) {
+            Integer sum = a + b;
+            return sum;
+        } else {
+            return null;
+        }
+        
     }
 
     /**
@@ -64,8 +67,6 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-    Integer a2;
-    Integer b2;
     Integer mutiplyR = (a * b);
         return mutiplyR; // Replace null with the variable you used to store the result
     }
@@ -80,10 +81,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Integer a, Integer b) {
-    Decimal a3;
-    Decimal b3;
-    Decimal devisionD = (a / b);
-        return devisionD; // Replace null with the variable you used to store the result
+        if (b!=0) {
+            Integer devisionD = a / b ;
+        return devisionD;
+        } else {
+            return 0;
+        }
     }
 
     /**
@@ -124,7 +127,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
-        String greeting = ('Hello' + 'World');
+        String greeting = (str1 + str2);
         return greeting; // Replace null with the variable you used to store the result
     }
 
@@ -140,7 +143,9 @@ public with sharing class VariablesDataTypesOperators {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-        String sentence =('The' + noun + verb + endingPunctuation);
+        string  str= 'The';
+        String str1= 'is';
+        String sentence =(str + ' '+ noun + ' '+ str1 +' '+ verb +endingPunctuation);
 		return sentence; // Replace null with the variable you used to store the result
 	}
 
@@ -184,7 +189,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer millisecondsPERMINUTE = 6000 ; // Make this value a constant
+        Integer millisecondsPERMINUTE = 60000 ; // Make this value a constant
         Integer milliseconds = minutes * millisecondsPERMINUTE; 
         return milliseconds; // Replace null with the variable you used to store the result
         }
@@ -233,8 +238,8 @@ public with sharing class VariablesDataTypesOperators {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - ((15 + 5)* 2);
-        return null; // Replace null with the variable you used to store the result
+        Integer answer = (48 - ((15 + 5)* 2));
+        return answer; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -269,7 +274,7 @@ public with sharing class VariablesDataTypesOperators {
         final Double sUBTRACTFACTOR = 45.0;
         final Double mULTIPLYFACTOR = 6.0;
         final Double dIVIDEFACTOR = 9.0;
-        final Double celsius = (fahrenheit -32) * (5/9);
+        final Double celsius = ((fahrenheit -32) * 5 ) /9;
     
         return celsius ; // Replace null with the variable you used to store the result
     }
