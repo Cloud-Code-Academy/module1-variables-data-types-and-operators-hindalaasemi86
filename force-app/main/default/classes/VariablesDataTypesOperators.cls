@@ -277,7 +277,7 @@ public with sharing class VariablesDataTypesOperators {
     
 
     /**
-     * Question 17
+     * Question 17.
      * Performs division and returns the result as a casted Integer.
      * It should 
      * Example: 3 / 2 => 1.5 should return 1
