@@ -52,8 +52,6 @@ public with sharing class VariablesDataTypesOperators {
      */
     
     public static Integer subtraction(Integer a, Integer b) {
-    Integer a1;
-    Integer b1;
     Integer sub= (a - b);
         return sub; // Replace null with the variable you used to store the result
     }
